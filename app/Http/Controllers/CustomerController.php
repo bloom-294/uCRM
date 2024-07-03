@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreCustomerRequest;
 use App\Http\Requests\UpdateCustomerRequest;
 use App\Models\Customer;
+use Inertia\Inertia;
+use Illuminate\Http\Request;
 
 class CustomerController extends Controller
 {
@@ -13,9 +15,18 @@ class CustomerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $customers =Customer::searchCustomers($request->search)
+            ->select('id', 'name', 'kana', 'tel')->paginate(50);
+            
+        return Inertia::render('Customers/Index', [
+        'customers' => $customers
+        ]);
+
+        // return Inertia::render('Customers/Index', [
+        //     'customers' => Customer::select('id', 'name', 'kana', 'tel')->paginate(50)
+        // ]);
     }
 
     /**
@@ -25,7 +36,7 @@ class CustomerController extends Controller
      */
     public function create()
     {
-        //
+        return Inertia::render('Customers/Create');
     }
 
     /**
@@ -36,7 +47,23 @@ class CustomerController extends Controller
      */
     public function store(StoreCustomerRequest $request)
     {
-        //
+        Customer::create([
+            'name' => $request->name,
+            'kana' => $request->kana,
+            'tel' => $request->tel,
+            'email' => $request->email,
+            'postcode' => $request->postcode,
+            'address' => $request->address,
+            'birthday' => $request->birthday,
+            'gender' => $request->gender,
+            'memo' => $request->memo,
+            ]);
+        
+        return to_route('customers.index')
+            ->with([
+                'message' => '登録しました。',
+                'status' => 'success'
+            ]);
     }
 
     /**
