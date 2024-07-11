@@ -25,11 +25,6 @@ defineProps({
                         <div class="container px-5 py-8 mx-auto">
                           <FlashMessage />
                           <div class="flex pl-4 my-4 lg:w-2/3 w-full mx-auto">
-                            <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Learn More
-                              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                                <path d="M5 12h14M12 5l7 7-7 7"></path>
-                              </svg>
-                            </a>
                             <Link as="button" :href="route('items.create')" class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">商品登録</Link>
                           </div>
                           <div class="lg:w-2/3 w-full mx-auto overflow-auto">
@@ -46,7 +41,7 @@ defineProps({
                               <tbody>
                                 <tr v-for="item in items" :key="item.id">
                                   <td class="border-b-2 border-gray-200 px-4 py-3">
-                                    <Link class="text-blue-400" :href="route('items.show', { item:item.id })">
+                                    <Link class="text-blue-300 hover:text-blue-500" :href="route('items.show', { item:item.id })">
                                     {{ item.id }}
                                     </Link>
                                   </td>

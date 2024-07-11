@@ -35,17 +35,12 @@ const searchCustomers = () => {
                   <div class="container px-5 py-8 mx-auto">
                     <FlashMessage />
                     <div class="flex pl-4 my-4 lg:w-2/3 w-full mx-auto">
-                      <!-- <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Learn More
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                          <path d="M5 12h14M12 5l7 7-7 7"></path>
-                        </svg>
-                      </a> -->
-                            <div>
-                              <input type="text" name="search" v-model="search">
-                              <button class="bg-blue-300 text-white py-2 px-2"
+                            <div class="flex">
+                              <input type="text" name="search" v-model="search" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" placeholder="タナカ"/>
+                              <button class="flex mx-auto text-white bg-blue-300 border-0 py-2 px-4 ml-1 focus:outline-none hover:bg-blue-400 rounded whitespace-nowrap"
                               @click="searchCustomers">検索</button>
                             </div>
-                            <Link as="button" :href="route('customers.create')" class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">顧客登録</Link>
+                            <Link as="button" :href="route('customers.create')" class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded items-center">顧客登録</Link>
                           </div>
                           <div class="lg:w-2/3 w-full mx-auto overflow-auto">
                             <table class="table-auto w-full text-left whitespace-no-wrap">
