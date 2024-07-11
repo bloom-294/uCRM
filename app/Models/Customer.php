@@ -9,6 +9,11 @@ class Customer extends Model
 {
     use HasFactory;
 
+    public function purchases()
+        {
+            return $this->hasMany(Purchase::class);
+        }
+
     public function scopeSearchCustomers($query, $input = null)
         {
             if(!empty($input)){
