@@ -18,10 +18,6 @@ const form = reactive({
     is_selling: props.item.is_selling
 });
 
-// const storeItem = () => {
-//     Inertia.post('/items', form);
-// }
-
 const updateItem = id => {
 Inertia.put(route('items.update', { item: id}), form)
 }
