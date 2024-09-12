@@ -11,6 +11,7 @@
 - 購入履歴検索・編集
 
 ## 画面構成
+- 新規登録
 - ログイン
 - dashboard
 - 購入
@@ -24,7 +25,8 @@
 
 ## 画面遷移図
 
-<img width="300" alt="image" src="https://github.com/user-attachments/assets/cf13a870-6289-41d0-a199-d842c80e8eda">
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/a041c39a-3f6d-4ceb-8f03-4bdbdc3a7338">
+
 
 ## Demo
 
