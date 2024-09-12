@@ -2,6 +2,20 @@
 - ` php artisan serve `
 - ` npm run dev `
 
+## 使用技術
+
+- vue.js(3系)
+- Tailwind CSS
+- axios
+- inertia.js
+- MySQL
+- php
+- laravel
+  
+<img src="https://img.shields.io/badge/vue.js-fffafa.svg?logo=vue.js&style=for-the-badge" /><img src="https://img.shields.io/badge/-TailwindCSS-fffafa.svg?logo=tailwindcss&style=for-the-badge" />
+<img src="https://img.shields.io/badge/MySQL-fffafa.svg?logo=MySQL&style=for-the-badge" /><img src="https://img.shields.io/badge/php-fffafa.svg?logo=php&style=for-the-badge" />
+<img src="https://img.shields.io/badge/laravel-fffafa.svg?logo=laravel&style=for-the-badge" />
+
 ## 機能
 - 新規登録
 - ログイン・ログアウト
