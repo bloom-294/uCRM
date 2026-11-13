@@ -1,16 +1,20 @@
+## 概要
+ PHPとLaravelの学習のため作成した、商品管理システムです。<br/>
+フロントエンド側をVue.js、バックエンド側をLaravelで実装しています。
+
 ## Local
 - ` php artisan serve `
 - ` npm run dev `
 
 ## 使用技術
 
-- vue.js(3系)
+- Vue.js(3系)
 - Tailwind CSS
 - axios
 - inertia.js
 - MySQL
-- php
-- laravel
+- PHP
+- Laravel
   
 <img src="https://img.shields.io/badge/vue.js-fffafa.svg?logo=vue.js&style=for-the-badge" /><img src="https://img.shields.io/badge/-TailwindCSS-fffafa.svg?logo=tailwindcss&style=for-the-badge" />
 <img src="https://img.shields.io/badge/MySQL-fffafa.svg?logo=MySQL&style=for-the-badge" /><img src="https://img.shields.io/badge/php-fffafa.svg?logo=php&style=for-the-badge" />
